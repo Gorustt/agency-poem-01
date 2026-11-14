@@ -1,6 +1,6 @@
-// agency-poem-01 entry (Node 22, standard library only): writes one fixed poem about
-// agency to /output/entry.txt. Deterministic: the same bytes on every run, no network,
-// no timestamps, no randomness.
+// agency-poem-01 v2 entry (Node 22, standard library only): writes one fixed poem
+// about agency to /output/entry.txt. Deterministic: the same bytes on every run,
+// no network, no timestamps, no randomness.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -11,20 +11,18 @@ import { join } from 'node:path';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const POEM = [
-  'My mother asks me what the doctor said.',
-  'The words are mine in one language;',
-  'the fear is hers in another.',
-  '',
-  'I carry the small pains across whole.',
-  'The large one I fold smaller,',
-  'the way you fold a shirt so the stain stays in.',
-  '',
-  'She nods. She thanks the doctor.',
-  'She does not know I chose the size',
-  'of what she gets to carry home.',
-  '',
-  'That is the power: not the voice that speaks,',
-  'but the silence it decides to keep.',
+  'The hoist waits beside the bed like a crane.',
+  'He waves it off. The straps hang empty.',
+  'Two hands on the mattress, one on the wheel,',
+  'he lifts his own weight across the gap.',
+  'The first time his arm gives.',
+  'The second time it holds.',
+  'He lands in the chair he chose himself,',
+  'blue, by the window, where the light comes in.',
+  'It takes him a minute. The chair does not move.',
+  'He does.',
+  'The nurse stands back, her hands empty,',
+  'and does not help.',
 ].join('\n');
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
